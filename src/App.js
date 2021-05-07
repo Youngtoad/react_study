@@ -1,24 +1,19 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import Hello from './Hello';
+import Wrapper from './Wrapper';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Wrapper>
+        {/* 주석 작성하는 법~ 
+        두개 이상의 태그는 감싸자!!*/}
+        <Hello name='react' color='red' isSpecial={true}
+          //주석 작성법 ㅎㅎ 태그는 무조건 닫혀있어야함!!
+        />
+        <Hello color = 'pink' />
+      </Wrapper>
+    </>
   );
 }
 
